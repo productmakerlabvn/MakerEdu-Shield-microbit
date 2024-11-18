@@ -1,96 +1,132 @@
-# Vietduino Uno USB Type - C (Arduino Uno Compatible)
+# Mạch MakerEdu Shield for Micro:bit
+
+![Micro:bit MakerEDU Shield Board](image/microbit1.jpg)
 
 ## Giới thiệu
 
-Mạch Vietduino Uno (Arduino Uno Compatible) được nghiên cứu và và sản xuất bởi MakerLab.vn dựa trên nguyên mẫu là mạch Arduino Uno với các ưu điểm vượt trội:
+Mạch MakerEdu Shield for Micro:bit là một bo mạch trung gian giúp bạn kết nối Micro:bit với các mạch trong hệ sinh thái phần cứng Robotics MakerEdu. Sau khi đã kết nối, Micro:bit sẽ trở thành mạch điều khiển trung tâm trong hệ sinh thái phần cứng Robotics MakerEdu với 3 chức năng chính:
 
-1. Thiết kế tương thích hoàn toàn về hình dạng, chuẩn chân tín hiệu và cách sử dụng với Arduino Uno.
-2. Sử dụng mạch nguồn xung giảm áp với ưu điểm là hiệu suất chuyển đổi cao, toả nhiệt thấp, tiết kiệm năng lượng, dải điện áp đầu vào cấp cho mạch rộng từ 6~24VDC với dòng đầu ra lớn: 5VDC/Max 1500mA, 3.3VDC / Max 700mA.
-3. Bổ sung thêm các chân cấp nguồn POWER+ 5VDC giúp dễ dàng cấp nguồn cho nhiều thiết bị khác nhau.
-4. Sử dụng IC chuyển đổi USB-UART CH340 được nhập khẩu chính hãng cho độ ổn định và độ bền cao.
-5. Chức năng cách ly nguồn cổng USB tự động khi cấp nguồn ngoài từ chân Vin hoặc giắc DC giúp bảo vệ cổng USB máy tính của bạn an toàn hơn.
+1. Chức năng lưu trữ và thực thi các lệnh lập trình qua khối điều kiển là mạch Micro:bit (Controller Unit).
+2. Chức năng cấp nguồn, giao tiếp và điều khiển các mạch module chức năng MakerEdu Module, cảm biến MakerEdu Sensor qua các cổng kết nối chuẩn XH2.54.
+3. Chức năng điều khiển 2 Động cơ DC, 2 Động cơ RC Servo qua Khối Công Suất (Power Unit) trên mạch MakerEdu Shield for Micro:bit.
+Mạch MakerEdu Shield for Micro:bit được thiết kế để có thể tương thích tốt nhất với phiên bản Micro:bit V2 và các phiên bản có thiết kế tương tự.
 
 ## Thông số kỹ thuật
 
-- **Model**: Vietduino Uno (Arduino Uno Compatible)  
-- **Vi điều khiển**: ATmega328P-PU  
-- **Điện áp hoạt động**: 5VDC  
-- **Điện áp đầu vào VIN**: 6~24VDC  
-- **Dòng DC đầu ra các chân I/O**: Max 20mA  
-- **Dòng DC đầu ra chân 3V3**: Max 700mA  
-- **Dòng DC đầu ra chân 5V**: Max 1500mA  
-- **Flash Memory**: 32KB với 0.5 KB sử dụng cho bootloader  
-- **SRAM**: 2KB  
-- **EEPROM**: 1KB  
-- **Clock Speed**: 16MHz  
-- **IC nạp chương trình và giao tiếp UART**: CH340  
-- **Cổng giao tiếp máy tính**: USB-C  
-- **Kích thước**: 68.6 x 53.34mm  
+<table><thead>
+  <tr>
+    <th>Model</th>
+    <th>MakerEdu Shield for Micro:bit</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>Tương thích</td>
+    <td>Tương thích tốt nhất với Micro:bit V2 hoặc các phiên bản có thiết kế tương tự.</td>
+  </tr>
+  <tr>
+    <td>Chuẩn Connector kết nối</td>
+    <td>XH2.54 3Pins / 4Pins</td>
+  </tr>
+  <tr>
+    <td>Nguồn đầu vào</td>
+    <td>5VDC từ cổng Micro USB trên mạch.</td>
+  </tr>
+  <tr>
+    <td>Cổng Digital I/O đơn</td>
+    <td>6 cổng: [P0], [P1], [P2], [P13], [P14], [P15]</td>
+  </tr>
+  <tr>
+    <td>Cổng Digital I/O đôi</td>
+    <td>2 cổng: [P0+P1], [P2+P8]</td>
+  </tr>
+  <tr>
+    <td>Cổng Analog Input</td>
+    <td>2 cổng: [P0], [P1], [P2]</td>
+  </tr>
+  <tr>
+    <td>Cổng giao tiếp I2C</td>
+    <td>2 cổng: [I2C]</td>
+  </tr>
+  <tr>
+    <td>Cổng điều khiển RC Servo</td>
+    <td>2 cổng: [P0], [P12]</td>
+  </tr>
+  <tr>
+    <td>Cổng điều khiển động cơ DC</td>
+    <td>2 cổng: [Motor_A], [Motor_B]</td>
+  </tr>
+  <tr>
+    <td>Cổng kết nối mở rộng (kẹp cá sấu, jack bắp chuối)</td>
+    <td>4 cổng: [P0], [P1], [P2], [GND]</td>
+  </tr>
+</tbody></table>
 
 ## Hình ảnh sản phẩm
 
-![Vietduino_Uno_USB_Type_C](image/vietunoc1.jpg)
-
-![Vietduino_Uno_USB_Type_C](/image/vietunoc2.jpg)
+![](image/microbit2.jpg)
 
 ## Kích thước sản phẩm
 
-![Vietduino_Uno_USB_Type_C](/image/vietunoc3.jpg)
+![](image/microbit3.jpg)
 
-## Các chân tín hiệu
+## Hướng dẫn sử dụng
 
-- **Digital I/O**: 14 chân (với 6 chân có chức năng PWM)  
-- **PWM Digital I/O**: 6 chân (D3, D5, D6, D9, D10, D11)  
-- **Analog Input**: 6 chân (A0~A5)  
-- **LED_BUILTIN**: D13  
+### Các tính năng vượt trội
 
-## Hướng dẫn sử dụng với phần mềm Arduino
+![MakerEdu Shield for Micro:bit Advance Function](image/microbit4.jpg)
 
-### Hướng dẫn sử dụng phần mềm Arduino cơ bản
+1. Mạch MakerEdu Shield for Micro:bit là một bo mạch trung gian giúp bạn kết nối Micro:bit với các mạch trong hệ sinh thái phần cứng Robotics MakerEdu với chuẩn kết nối connector XH2.54 chắc chắn, chống ngược và dễ dàng tháo lắp khi sử dụng với các mạch module chức năng MakerEdu Module và cảm biến MakerEdu Sensor.
+2. Cấp nguồn qua cổng MicroUSB dễ dàng và an toàn, có thể sử dụng pin dự phòng (Power Bank), nguồn sạc điện thoại hoặc nguồn từ cổng USB máy tính để cấp nguồn cho mạch MakerEdu Shield for Micro:bit
+3. Tích hợp cổng điều khiển 2 x Động cơ RC Servo.
+4. Tích hợp cổng điều khiển 2 x Động cơ DC.
+5. Vỏ Mica bảo vệ an toàn, tránh chập chạm.
+6. Tích hợp các cổng kết nối mở rộng tương tự như Micro:bit dùng cho các ứng dụng cảm ứng chạm hoặc kết nối đơn giản.
 
-1) Giới thiệu về Arduino
-2) Ngôn ngữ lập trình Arduino
-3) Cách cài đặt phần mềm Arduino IDE
-4) Cách cài đặt Driver và nạp chương trình cho mạch Arduino / Arduino Compatible
-5) Cách cài đặt các thư viện phần cứng Arduino Library
-6) Cách sử dụng Serial Monitor & Serial Plotter trên phần mềm Arduino
+### Các lưu ý
 
-### Hướng dẫn kết nối và nạp chương trình cho Mạch Vietduino Uno trên phần mềm Arduino
+![MakerEdu Shield for Micro:bit connect with Motor
+](image/microbit5.jpg)
 
-1) **Kết nối máy tính**: Kết nối Mạch Vietduino Uno với máy tính bằng cáp USB sẽ thấy Led nguồn ON trên mạch **phát sáng**:
+#### 1) Cấp nguồn
 
-[![Vietduino_Uno_USB_Type_C](/image/vietunoc4.jpg)]()
+Các bạn bắt buộc phải cấp nguồn qua cổng MicroUSB của MakerEdu shield vì nguồn trên các cổng kết nối, động cơ và Micro:bit đều được lấy từ cổng này, khi đó nguồn chính của hệ thống sẽ là 5VDC, các bạn có thể lựa chọn cấp nguồn từ cổng USB của máy tính, các loại nguồn cấp bằng cổng USB hoặc với các ứng dụng di động như robot có thể cấp nguồn bằng sạc dự phòng, loại sạc dự phòng khuyến nghị sử dụng:
 
-2) **Cài đặt Driver**: Mạch Vietduino Uno mà một mạch Arduino Uno Compatible (tương thích Arduino Uno) sử dụng IC nạp chương trình và giao tiếp máy tính CH340, các bạn có thể tham khảo Hướng dẫn cài đặt Driver cho các mạch sử dụng IC giao tiếp USB-UART CH34x - MakerLab Wiki.
-3) **Cấu hình mạch trên phần mềm Arduino**: Để cấu hình mạch trên phần mềm Arduino chúng ta cần làm các bước sau:
+- [Pin dự phòng USB-C 5VDC 2A 5000mAh Mini Power Bank](https://hshop.vn/pin-du-phong-usb-c-5vdc-2a-5000mah-mini-power-bank)
 
-     Thiết lập Board tại **Tools > Board > Arduino AVR Boards > Arduino Uno và Port (cổng kết nối) cho mạch**, nếu không xác định được cổng kết nối có thể ngắt kết nối mạch và kết nối lại đồng thời kiểm tra phần Port để thấy cổng kết nối mới của mạch xuất hiện:  
+#### 2) Động cơ DC
 
-[![Vietduino_Uno_USB_Type_C](/image/vietunoc5.jpg)]()
+Động cơ DC sử dụng phải là loại có thể hoạt động ở điện áp 5VDC, với dòng điện tiêu thụ tối đa 800mA, các loại động cơ khuyến nghị sử dụng:
 
-Sau khi đã hoàn thành các thiết lập cơ bản bạn có thể nạp chương trình **Blink** sau vào mạch để test bằng cách nhấn vào nút **Upload** hoặc chọn **Sketch > Upload** sẽ thấy Led được kết nối với chân D13 trên mạch chớp tắt **1 giây 1 lần**:<br>
+- [Động cơ DC giảm tốc V1 Dual Shaft Plastic Geared TT Motor + bánh xe](https://hshop.vn/dong-co-dc-giamtoc-v1-1-48)
+- [Bộ động cơ DC giảm tốc GA12 N20 kèm gá bắt và bánh xe V1 34mm](https://hshop.vn/bo-dong-co-dc-giam-toc-ga12-n20-kem-ga-bat-va-banh-xe-v1-34mm)
+- [Động cơ bơm chìm Mini Water Pump 5VDC](https://hshop.vn/dong-co-bom-chim-mini-5vdc) (lưu ý với động cơ bơm cần phải cấp đúng chiều + và - không sẽ làm hỏng cấu trúc động cơ).
 
-```ino
-/*
-  Blink
-  Turns an LED_BUILTIN on D13 of Vietduino Uno for one second, then off for one second, repeatedly.
-*/
-// the setup function runs once when you press reset or power the board
-void setup() {
-  // initialize digital pin LED_BUILTIN on D13 as an output.
-  pinMode(13, OUTPUT);
-}
+#### 3) Động cơ RC Servo
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(13, HIGH);  // turn the LED on (HIGH is the voltage level)
-  delay(1000);                      // wait for a second
-  digitalWrite(13, LOW);   // turn the LED off by making the voltage LOW
-  delay(1000);                      // wait for a second
-}
-```
+Động cơ RC Servo sử dụng phải là loại có thể hoạt động ở điện áp 5VDC, động cơ RC Servo sử dụng trực tiếp nguồn từ cổng MicroUSB của MakerEdu Shield nên khi sử dụng cần cấp nguồn với dòng điện đủ để động cơ có thể hoạt động bình thường, động cơ khuyến nghị sử dụng:
 
-[![Vietduino_Uno_USB_Type_C](/image/vietunoc6.jpg)]()
+- [Động cơ RC Servo 9G](https://hshop.vn/dong-co-rc-servo-9g)
+- [Động cơ RC Servo MG90S](https://hshop.vn/dong-co-rc-servo-mg90s)
+
+### Cách kết nối
+
+![Kết nối chiều biểu tượng logo màu vàng của Micro:bit hướng theo chiều ký hiệu trên MakerEdu Shield.](image/microbit6.jpg)
+
+Sau khi kết nối thành công, cấp nguồn vào cổng MicroUSB của MakerEdu Shield sẽ thấy đèn nguồn trên Micro:bit và MakerEdu Shield sáng như hình:
+
+![Đèn nguồn trên Micro:bit và MakerEdu Shield phát sáng báo hiệu kết nối thành công.](image/microbit7.jpg)
+
+## Hướng dẫn sử dụng phần mềm MakeCode với mạch Micro:bit + MakerEdu Shield for Micro:bit
+
+1) Giới thiệu về mạch Micro:bit và phần mềm MakeCode
+
+2) Giới thiệu và hướng dẫn sử dụng mạch MakerEdu Shield for Micro:bit
+
+3) Cách kết nối và nạp chương trình cho mạch Micro:bit trên máy tính với phần mềm MakeCode
+
+4) Cách kết nối và nạp chương trình cho mạch Micro:bit trên điện thoại, máy tính bảng với phần mềm MakeCode
+
+5) Cách cài đặt Extension và giới thiệu các khối lệnh cho phần cứng MakerEdu trên phần mềm MakeCode
 
 ## Hỗ trợ và liên hệ
 
